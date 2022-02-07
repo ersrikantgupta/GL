@@ -1,17 +1,13 @@
 import userDetailsService from "@/services/userDetailsService";
 
 const state = {
-    userDetails: {},
-    formDetails: null
+    userDetails: {}
 };
 
 const getters = {
     getDetails(state) {
         return state.userDetails;
-    },
-    formDetails(state) {
-        return state.formDetails;
-    },
+    }
 };
 
 const actions = {
@@ -25,7 +21,7 @@ const actions = {
         { commit },
          formData
     ) {
-        return userDetailsService.getUserFormList(
+        return userDetailsService.getUserFormListAPICall(
             commit,
             formData
         );
@@ -35,11 +31,7 @@ const actions = {
 const mutations = {
      setuserDetails(state, userDetails) {
         state.userDetails = userDetails;
-    },
-    setClickCommissionList(state, formDetails) {
-        state.formDetails = formDetails.data;
     }
-
 };
 
 export const userDetails = {

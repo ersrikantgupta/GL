@@ -2,17 +2,20 @@
   <div id="app">
     <userData/>
     <userDetail />
+    <formData />
   </div>
 </template>
 
 <script>
 import userData from './components/userData.vue'
 import userDetail from './components/userDetail.vue'
+import formData from './components/formData.vue'
 export default {
   name: 'App',
   components: {
     userData,
-    userDetail
+    userDetail,
+    formData
   }
 }
 </script>

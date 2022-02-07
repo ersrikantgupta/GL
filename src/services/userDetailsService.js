@@ -9,11 +9,12 @@ const getuserDetailsAPICall = async (commit, userId) => {
     commit("setuserDetails", result.data);
 };
 
-const getUserFormList = async (commit, requestPayload) => {
-    await axios.post(GET_FORMDATA, requestPayload);
+const getUserFormListAPICall = async (commit, requestPayload) => {
+    const result = await axios.post(GET_FORMDATA, requestPayload);
+    commit("setuserDetails", result.data);
 };
 
 export default {
     getuserDetailsAPICall,
-    getUserFormList
+    getUserFormListAPICall
 };

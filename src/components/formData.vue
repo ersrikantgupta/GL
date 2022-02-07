@@ -1,15 +1,16 @@
 <template>
 <div class="container">
+<h2>User Information</h2>
 <form>
   <div class="form-group">
-    <label for="examplename">First name</label>
-    <input type="text" class="form-control" v-model="firstname" id="examplename" placeholder="name">
+    <label for="examplename">First Name</label>
+    <input type="text" class="form-control" v-model="firstname" id="examplename" placeholder="First Name">
   </div>
   <div class="form-group">
-    <label for="examplename1">Last name</label>
-    <input type="text" class="form-control" v-model="lastname" id="examplename1" placeholder="name">
+    <label for="examplename1">Last Name</label>
+    <input type="text" class="form-control" v-model="lastname" id="examplename1" placeholder="Last Name">
   </div>
-  <button type="submit" class="btn btn-primary"  @click="submit">Submit</button>
+  <button type="submit" class="btn btn-info"  @click="submit">Submit</button>
 </form>
 
 </div>
@@ -26,14 +27,6 @@ export default {
             apiErrorMessage: null
         };
     },
-    // computed: {
-    //    /**
-    //      * Getters called
-    //      */
-    //     ...mapGetters({
-    //         formDetail: "userDetails/formDetail"
-    //     })
-    // },
     methods: {
         ...mapActions({
             getUserFormList:
@@ -60,3 +53,13 @@ export default {
     }
 };
 </script>
+<style>
+h2{
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+}
+form{
+    text-align:left;
+}
+</style>
